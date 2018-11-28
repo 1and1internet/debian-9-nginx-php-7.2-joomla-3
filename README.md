@@ -1,10 +1,10 @@
-# Joomla 3 on Nginx with PHP 7.1 on Ubuntu 16.04 LTS (Xenial Xerus)
+# Joomla 3 on Nginx with PHP 7.2 on Debian 9
 
 This image provides a PHP hosting environment suitable for Joomla 3 and pre-installs Joomla 3 if the storage volume is blank. The intent is for the PHP application itself to be stored in persistent storage wihch is then mounted in to this image at `/var/www`
 
 ## Updates
 
-Please consult [the official Ubuntu site](https://www.ubuntu.com/info/release-end-of-life) for information on when this version of Ubuntu becomes end of life.
+Please consult https://wiki.debian.org/LTS for information regarding debian 9 lifecycle.
 
 Please consult [the official PHP site](http://php.net/supported-versions.php) to know when this version of PHP becomes end of life. It is recommended that you move to a newer version of PHP once this version passed out of active support.
 
@@ -20,7 +20,7 @@ UID=999
 PORT=80
 WEB_ROOT="/var/www/"
 
-docker run -u ${UID}:0 -p ${PORT}:8080 -v ${WEB_ROOT}:/var/www/ 1and1internet/ubuntu-16-nginx-php-7.1-joomla-3
+docker run -u ${UID}:0 -p ${PORT}:8080 -v ${WEB_ROOT}:/var/www/ 1and1internet/debian-9-nginx-php-7.2-joomla-3
 ```
 
 ## Building and testing
